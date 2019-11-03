@@ -1,0 +1,390 @@
+$primarytext-white: rgb(245, 235, 249);
+$primarybackground: yellow;
+$primarytext-darkest: #2F2F5D;
+$primary-darkest-semitrans: rgba(47, 47, 93,.6);
+$primarytext-medium: #383369;
+$primarytext-light: #7C276C;
+$primarytext-brightest: #F30B6F;
+$primarytext-reverse: #00F9F8;
+$primarytext-reverse-hover: rgb(208, 249, 249);
+$cursive-font: 'Permanent Marker', cursive;
+$monospace-font: 'Roboto Mono', monospace; 
+// $sans-serif-font: ;
+$transition-speed: 1.2s;
+
+
+html {
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+
+.App {
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+    transition: .5s;
+    // background-color: $primarytext-reverse;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+.nav {
+    padding-left: 100px !important;
+    z-index: 999;
+    // font-family: $;
+}
+
+.nav-brand {
+    font-family: $cursive-font;
+    color: $primarytext-reverse;
+    width: 150px;
+    h2 {
+        line-height: 80px;
+        position:absolute;
+        left:0;
+        &::before {
+            content: attr(data-text);
+            color: $primarytext-light;
+            position:relative;
+            left: 130px;
+            top: 2px;
+            z-index: -1;
+        }
+    }
+}
+
+.dark {
+    height: 70px!important;
+    padding: 0 100px !important;
+    background-color: $primary-darkest-semitrans;
+    transition-duration: 1s!important;
+    transition-timing-function: ease-in-out;
+    ul {
+        box-shadow: floor($number: 20);
+        li{
+            a {
+                color: $primarytext-reverse !important;
+                animation: fadeToCyan .5s ease-in-out;
+                text-shadow: 3px 3px 5px rgba(43, 43, 43, 0.8)
+            }
+            a:hover {
+                color: $primarytext-brightest !important;
+            }
+        }
+    }
+}
+
+@keyframes fadeToCyan {
+    from {color: $primarytext-brightest}
+    to {color: $primarytext-reverse}
+}
+
+.navigationSection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 120px;
+    padding: 30px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    ul {
+        position: absolute;
+        right: 0;
+        display:flex;
+        justify-content: space-evenly;
+        width: 420px;
+        font-size: 1.3rem;
+        margin-right: 80px;
+        transition-duration: .5s;
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+            a {
+                text-decoration: none;
+                color: $primarytext-brightest;
+                line-height: 80px;
+                &.active {
+                    text-decoration: none;
+                    color: $primarytext-light;
+                    background-color: $primarytext-reverse;
+                    line-height: 80px;
+                }
+                &:hover {
+                    color: $primarytext-reverse;
+                    transition: .5s;
+                }
+            }
+            &:nth-child(1) {
+                margin-left: 0px;
+                margin-right: 0px;
+                animation: 1s push-in-left ease-in-out;
+            }
+            &:nth-child(2) {
+                margin-left: 0px;
+                margin-right: 0px;
+                animation: 1s push-in ease-in-out;
+            }
+            &:nth-child(3) {
+                margin-left: 0px;
+                margin-right: 0px;
+                animation: 1s push-in ease-in-out;
+            }
+            &:nth-child(4) {
+                margin-left: 0px;
+                margin-right: 0px;
+                animation: 1s push-in-right ease-in-out;
+            }
+            &:nth-child(1):hover {
+                margin-left: 3px;
+                margin-right: 30px;
+                animation: 1.5s push-out-left ease-in-out;
+            }
+            &:nth-child(2):hover {
+                margin-left: 30px;
+                margin-right: 30px;
+                animation: 1.5s push-out ease-in-out;
+            }
+            &:nth-child(3):hover {
+                margin-left: 30px;
+                margin-right: 30px;
+                animation: 1.5s push-out ease-in-out;
+            }
+            &:nth-child(4):hover {
+                margin-left: 30px;
+                margin-right: 3px;
+                animation: 1.5s push-out-right ease-in-out;
+            }
+        }
+    }
+}
+
+@keyframes push-out {
+    from {margin-left: 0px;
+    margin-right: 0px;}
+    to {margin-left: 30px;
+        margin-right: 30px;}
+}
+
+@keyframes push-out-left {
+    from {margin-left: 0px;
+    margin-right: 0px;}
+    to {margin-left: 3px;
+        margin-right: 30px;}
+}
+
+@keyframes push-out-right {
+    from {margin-left: 0px;
+    margin-right: 0px;}
+    to {margin-left: 30px;
+        margin-right: 3px;}
+}
+
+@keyframes push-in {
+    from {margin-left: 30px;
+        margin-right: 30px;}
+    to {margin-left: 0px;
+    margin-right: 0px;}
+}
+
+@keyframes push-in-left {
+    from {margin-left: 3px;
+        margin-right: 30px;}
+    to {margin-left: 0px;
+    margin-right: 0px;}
+}
+
+@keyframes push-in-right {
+    from {margin-left: 30px;
+        margin-right: 3px;}
+    to {margin-left: 0px;
+    margin-right: 0px;}
+}
+
+.homePageSection {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    header {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        padding-top: 15rem;
+        // padding-left: 10rem;
+    }
+    .sec1 {
+        margin-top: 20vh;
+        width: 100vw;
+        height: 110vh;
+        padding: 100px;
+        padding-top: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.7rem;
+        color: $primarytext-white;
+        position: relative;
+        z-index: 10;
+        background-image: url(../09.jpg);
+        p {
+            text-indent: 50px;
+            text-align: justify;
+            text-align-last: left;
+            width: 55vw;
+        }
+    }
+}
+
+.parallax-wrapper {
+    width: 100vw;
+    height:100vh;
+    padding-top:5vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    .headerTitle {
+        z-index: 1;
+        color: $primarytext-white;
+        font-family: $monospace-font;
+        font-size: 3rem;
+        text-align: left;
+        margin: 0 auto;
+        padding: 10px;
+        padding-left: 0;
+        width: 63%;
+        line-height: 4.5rem;
+        text-shadow: -1px -1px 1px rgba(45, 245, 249, 0.187), 1px 1px 1px rgba(63, 212, 232, 0.5), 5px 2px 4px rgba(171, 240, 247, 0.112);
+        .line1 {
+            .cyan{
+                color: $primarytext-reverse;
+            }
+            &::after {
+                content: '_';
+                color: $primarytext-reverse;
+                background-color: $primarytext-reverse;
+                position:relative;
+                height: 10px;
+                overflow: hidden;
+                left: -25px;
+                top: 2px;
+                z-index: 0;
+                animation: blink 0.7s infinite;
+            }                    
+        }
+    }
+    &::before {
+        content:"";
+        width: 100vw;
+        height: 140vh;
+        top:-250px;
+        left:0;
+        background-image: url("../02.jpg");
+        background-size: 130%;
+        background-position: center;
+        position: absolute;
+        z-index: -1;
+        transform:translateZ(-1px) scale(2);
+    }
+}   
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.7rem;
+    color: $primarytext-white;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+.typing-emoji {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+@keyframes blink {
+    0%{
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+}
+
+.glitch {
+    color: white;
+    font-size: 6rem;
+    position: relative;
+    width: 29vw;
+    margin: 0 auto;
+    white-space: nowrap;
+    font-family: $monospace-font;
+    margin-bottom:40px;
+    &::before {
+        content: attr(data-text);
+        position: absolute;
+        left: 0x;
+        text-shadow: 1px 0 blue;
+        top: 0;
+        color: white;
+        overflow: hidden;
+        animation: noise-anim-2 25s infinite linear alternate-reverse;
+    }
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        left: 1px;
+        text-shadow: -1px 0 red;
+        top: 0;
+        color: white;
+        overflow: hidden;
+        animation: noise-anim 4s infinite linear alternate-reverse;
+    }
+}
+
+.magenta {
+    color: $primarytext-brightest;
+}
+
+@keyframes noise-anim {
+$steps: 20;
+@for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+    $top: random(100);
+    $bottom: random(101 - $top);
+    clip-path: inset(#{$top}% 0 #{$bottom}%  0);
+    }
+}
+}
+
+
+@keyframes noise-anim-2 {
+$steps: 20;
+@for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+    $top: random(100);
+    $bottom: random(101 - $top);
+    clip-path: inset(#{$top}% 0 #{$bottom}%  0);
+    }
+}
+}
+
+footer {
+    width:100vw;
+    margin:0;
+    background-color: $primarytext-darkest;
+}
