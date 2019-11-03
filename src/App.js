@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 function App() {
   const [activeClass, setActiveClass] = useState('')
   const [position, setPosition] = useState(0)
+
   // const containerElem = useRef(null);
   // const initialMousePos = { x: 0, y: 0 };
 
@@ -37,20 +38,20 @@ function App() {
     console.log('position: ', e.target.scrollTop, ' screen: ', window.innerHeight)
     e.target.scrollTop > 9 ? setActiveClass('dark') : setActiveClass('');
     if (e.target.scrollTop < 10) e.target.scrollTop = 0;
-    if (e.target.scrollTop > 400 && e.target.scrollTop < 800);
+    // if (e.target.scrollTop > 460 && e.target.scrollTop < 800); e.target.scrollTop = window.innerHeight;
     setPosition(e.target.scrollTop);
   }
   
+
+
   return (
     <div className="App" onScroll={onScroll}>
       <Navigation
         activeClass={activeClass}
-      />
+      />    
       <HomePage 
         position={position}
-      />
-      <Footer />
-      
+      />  
     </div>
   );
 }

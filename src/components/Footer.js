@@ -1,22 +1,20 @@
-import React from 'react'
+import React from 'react';
 
 export default function Footer() {
     return (
-        <footer className="row container-fluid d-flex justify-content-center m-0 mt-5">
+        <footer className="row container-fluid d-flex justify-content-center m-0 pt-3">
             <div className="container-fluid pt-5 mb-5 footer pl-4 pr-5">
                 <div className="row mb-3">
-                    <div className="col-12 col-sm-6 col-md-3 col-lg-3">
-                        {/* <img className="mb-5"
-                        src={require('../assets/movieloungelogo-01.png')
-                        } alt="logo" width="130" height="auto" /> */}
+                    <div className="col-12 col-sm-6 col-md-3 col-lg-3 d-fex justify-content-center align-items-center px-5">
+                        <h2 className='Haifolio text-center' data-text="Haifolio">Haifolio</h2>
                     </div>
                     <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                        <h5 className="footer-h5">Company</h5>
+                        <h5 className="footer-h5">My Links</h5>
                         <ul className="list-unstyled text-small">
-                            <li><a className="text-muted" href="#">Home</a></li>
-                            <li><a className="text-muted" href="#">About us</a></li>
-                            <li><a className="text-muted" href="#">CoderSchool</a></li>
-                            <li><a className="text-muted" href="#">Our partners</a></li>
+                            <li><a className="text-muted" href="/" onClick={e => window.scrollTo(0,0)}>Home</a></li>
+                            <li><a className="text-muted" href="#about">About me</a></li>
+                            <li><a className="text-muted" href="#works">Works</a></li>
+                            <li><a className="text-muted" href="#contact">Contact</a></li>
                             <li><a className="text-muted" href="#">Blog</a></li>
                         </ul>
                     </div>
@@ -44,14 +42,14 @@ export default function Footer() {
 
                     <div className="col-6 col-sm-6 col-md-6 col-lg-3 social-af">
                         <div className="row d-flex justify-content-lg-end justify-content-md-around ">
-                            <a className="social-btn" href="https://www.facebook.com">
+                            <a className="social-btn" href="https://www.facebook.com/haichungvisual">
                                 <i className="fab fa-facebook-square fa-3x" aria-hidden="true"></i>
                             </a>
-                            <a className="social-btn" href="https://www.twitter.com">
-                                <i className="fab fa-twitter-square fa-3x ml-md-3" aria-hidden="true"></i>
+                            <a className="social-btn" href="https://www.github.com/haichungcn">
+                                <i className="fab fa-github-square fa-3x ml-md-3" aria-hidden="true"></i>
                             </a>
-                            <a className="social-btn" href="https://www.instagram.com">
-                                <i className="fab fa-instagram fa-3x ml-md-3" aria-hidden="true"></i>
+                            <a className="social-btn" href="https://www.linkedin.com/in/hai-chung-77a08773/">
+                                <i className="fab fa-linkedin fa-3x ml-md-3" aria-hidden="true"></i>
                             </a>
                         </div>
                         <div className="row d-flex justify-content-lg-end justify-content-md-around mt-4">
@@ -62,7 +60,7 @@ export default function Footer() {
                 <div className="row mt-5">
                     <div className="col-11 col-md-5 col-lg-4 text-muted">
                         <p className="container-fluid text-left pl-0">
-                            @ 2018-2019 The Movie Lounge Co.
+                            @ 2018-2019 Hai Chung.
                                 </p>
                     </div>
                     <div className="col-1 col-sm-3 col-md-3 col-lg-5"></div>
