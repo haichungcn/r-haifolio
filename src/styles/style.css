@@ -386,7 +386,7 @@ body {
   color: #f5ebf9;
   position: relative;
   z-index: 10;
-  background-image: url(../09.jpg);
+  background-image: url(../09s.jpg);
   background-size: cover;
 }
 
@@ -453,7 +453,7 @@ body {
   height: 140vh;
   top: -250px;
   left: 0;
-  background-image: url("../02.jpg");
+  background-image: url("../02s.jpg");
   background-size: 130%;
   background-position: center;
   position: absolute;
@@ -519,7 +519,7 @@ body {
   color: #f5ebf9;
   position: relative;
   z-index: 10;
-  background-image: url(../09.jpg);
+  background-image: url(../09s.jpg);
   background-size: cover;
 }
 

@@ -395,7 +395,7 @@ body {
         color: $primarytext-white;
         position: relative;
         z-index: 10;
-        background-image: url(../09.jpg);
+        background-image: url(../static/09s.jpg);
         background-size: cover;
         p {
             text-indent: 50px;
@@ -454,7 +454,7 @@ body {
         height: 140vh;
         top:-250px;
         left:0;
-        background-image: url("../02.jpg");
+        background-image: url("../static/02s.jpg");
         background-size: 130%;
         background-position: center;
         position: absolute;
@@ -501,7 +501,7 @@ body {
     color: $primarytext-white;
     position: relative;
     z-index: 10;
-    background-image: url(../09.jpg);
+    background-image: url(../static/09s.jpg);
     background-size: cover;
     p {
         text-indent: 50px;

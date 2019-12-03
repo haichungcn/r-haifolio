@@ -42,7 +42,7 @@ export default function HomePage(props) {
                     <Col lg={4}>
                         <Figure.Image
                             alt="Haifly"
-                            src={require(`../haivatar1.png`)}
+                            src={require(`../static/haivatar1.png`)}
                         />
                     </Col>
                     <Col lg={8}>
@@ -63,7 +63,7 @@ export default function HomePage(props) {
                                     className="mt-3"
                                     alt="html5"
                                     width={100}
-                                    src={require(`../html-5.png`)}
+                                    src={require(`../static/html-5.png`)}
                                 />
                             </Col>
                             <Col lg={8} sm={6} className="text-left vertical-align-center">
@@ -79,7 +79,7 @@ export default function HomePage(props) {
                                     className="mt-3"
                                     alt="css3"
                                     width={100}
-                                    src={require(`../css-3.png`)}
+                                    src={require(`../static/css-3.png`)}
                                 />
                             </Col>
                         </Row>
@@ -89,7 +89,7 @@ export default function HomePage(props) {
                                     className="mt-3"
                                     alt="javascript"
                                     width={100}
-                                    src={require(`../js.png`)}
+                                    src={require(`../static/js.png`)}
                                 />
                             </Col>
                             <Col lg={8} sm={6} className="text-left vertical-align-center">
@@ -105,7 +105,7 @@ export default function HomePage(props) {
                                     className="mt-3"
                                     alt="react"
                                     width={150}
-                                    src={require(`../react.png`)}
+                                    src={require(`../static/react.png`)}
                                 />
                             </Col>
                         </Row>
@@ -115,7 +115,7 @@ export default function HomePage(props) {
                                     className="mt-3"
                                     alt="redux"
                                     width={130}
-                                    src={require(`../redux.png`)}
+                                    src={require(`../static/redux.png`)}
                                 />
                             </Col>
                             <Col lg={8} sm={6} className="text-left vertical-align-center">
@@ -131,7 +131,7 @@ export default function HomePage(props) {
                                     className="mt-3"
                                     alt="python"
                                     width={120}
-                                    src={require(`../python.png`)}
+                                    src={require(`../static/python.png`)}
                                 />
                             </Col>
                         </Row>
@@ -150,7 +150,7 @@ export default function HomePage(props) {
                             className="mt-3 border-shadow"
                             alt="htmlcanvasgame"
                             width={400}
-                            src={require(`../game1.png`)}
+                            src={require(`../static/game1.png`)}
                         /></a>
                         <h2 className="magenta text-shadow-light">HTML5 Canvas Game</h2>
                     </Col>
@@ -161,7 +161,7 @@ export default function HomePage(props) {
                             className="mt-3 border-shadow"
                             alt="numberguessinggame"
                             width={400}
-                            src={require(`../game2.png`)}
+                            src={require(`../static/game2.png`)}
                         /></a>
                     </Col>
                     <Col lg={4} sm={6}>
@@ -170,7 +170,7 @@ export default function HomePage(props) {
                             className="mt-3 border-shadow"
                             alt="reacttictactoe"
                             width={400}
-                            src={require(`../game3.png`)}
+                            src={require(`../static/game3.png`)}
                         /></a>
                         <h2 className="magenta text-shadow-light">React Tic-Tac-Toe with Facebook login</h2>
                     </Col>
@@ -183,7 +183,7 @@ export default function HomePage(props) {
                                 className="mt-3 border-shadow"
                                 alt="currencyconverter"
                                 width={400}
-                                src={require(`../app1.png`)}
+                                src={require(`../static/app1.png`)}
                             />
                         </a>
                     </Col>
@@ -193,7 +193,7 @@ export default function HomePage(props) {
                             className="mt-3 border-shadow"
                             alt="reactweatherapp"
                             width={400}
-                            src={require(`../app2.png`)}
+                            src={require(`../static/app2.png`)}
                         /></a>
                         <h2 className="magenta text-shadow-light">React Weather App with API</h2>
                     </Col>
@@ -204,7 +204,7 @@ export default function HomePage(props) {
                             className="mt-3 border-shadow"
                             alt="moviedatabase"
                             width={400}
-                            src={require(`../app3.png`)}
+                            src={require(`../static/app3.png`)}
                         /></a>
                     </Col>
                 </Row>
@@ -215,7 +215,7 @@ export default function HomePage(props) {
                             className="mt-3 border-shadow"
                             alt="twitter"
                             width={400}
-                            src={require(`../app4.png`)}
+                            src={require(`../static/app4.png`)}
                         /></a>
                         <h2 className="magenta text-shadow-light">Twitter</h2>
                     </Col>
@@ -225,7 +225,7 @@ export default function HomePage(props) {
                             className="mt-3 border-shadow"
                             alt="todoapp"
                             width={400}
-                            src={require(`../app5.png`)}
+                            src={require(`../static/app5.png`)}
                         /></a>
                         <h2 className="magenta text-shadow-light">To-do App</h2>
                     </Col>
@@ -235,7 +235,7 @@ export default function HomePage(props) {
                             className="mt-3 border-shadow"
                             alt="reactgithub"
                             width={400}
-                            src={require(`../app6.png`)}
+                            src={require(`../static/app6.png`)}
                         /></a>
                         <h2 className="magenta text-shadow-light">React-Github</h2>
                     </Col>
@@ -257,7 +257,7 @@ export default function HomePage(props) {
                 <Figure.Image
                     className="mt-3 formImage"
                     alt="haiavatar2"
-                    src={require(`../hai2.png`)}
+                    src={require(`../static/hai2.png`)}
                 />
             </section>
             <Footer />
