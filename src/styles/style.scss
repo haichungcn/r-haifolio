@@ -521,7 +521,7 @@ body {
 
 }   
 
-.sec2 {
+.workssection {
     width: 100vw;
     height: 200vh;
     padding: 0 100px;
@@ -546,6 +546,9 @@ body {
         transform: translateY(-10px) scale(1.005)!important;
         transition-duration: .4s;
         transform: scale(3);
+    }
+    a:hover h2 {
+        top: 0;
     }
 }
 
@@ -586,6 +589,7 @@ body {
     @media screen and (max-width: 800px) {
         margin-top: 550px;
     }
+    
 }
 
 .typing-emoji {
@@ -633,6 +637,57 @@ body {
         color: $primarytext-reverse;
         overflow: hidden;
         animation: noise-anim 4s infinite linear alternate-reverse;
+    }
+}
+
+.workcard {
+    .up50 {
+        position: relative;
+        top: -50%;
+        z-index: -1;
+        opacity: 0;
+        animation: slidedown 1s reverse;
+    }
+    .down50 {
+        position: relative;
+        top: 50%;
+        z-index: -1;
+        opacity: 0;
+        animation: slideup 1s reverse;
+    }
+    &:hover {
+        .up50{
+            top:0;
+            opacity:1;
+            animation: slidedown 1s ease;
+        }
+        .down50{
+            top:0;
+            opacity:1;
+            animation: slideup 1s;
+        }
+    }
+}
+
+@keyframes slidedown {
+    from {
+        top: -50%;
+        opacity: 0;
+    }
+    to {
+        top:0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideup {
+    from {
+        top: 50%;
+        opacity: 0;
+    }
+    to {
+        top:0;
+        opacity: 1;
     }
 }
 

@@ -139,23 +139,24 @@ export default function HomePage(props) {
                 </Row>
             </section>
 
-            <section className="parallax-wrapper sec2 mt-2" id="works">
+            <section className="parallax-wrapper workssection mt-2" id="works">
                 <Row className="w-100 mb-5">
                     <div className="glitch" data-text="HAI'S WORKS">HAI'S WORKS</div>
                 </Row>
-                <Row className="w-100">
-                    <Col lg={4} sm={6}>
+                <Row className="w-100 p-0">
+                    <Col lg={4} sm={6} className="workcard">
                         <a className="thumnail" href="https://brave-knuth-eb47ee.netlify.com/" _target="blank">
                         <Figure.Image
                             className="mt-3 border-shadow"
                             alt="htmlcanvasgame"
                             width={400}
                             src={require(`../static/game1.png`)}
-                        /></a>
-                        <h2 className="magenta text-shadow-light">HTML5 Canvas Game</h2>
+                        />
+                        </a>
+                        <h2 className="magenta text-shadow-light up50">HTML5 Canvas Game</h2>
                     </Col>
-                    <Col lg={4} sm={6}>
-                        <h2 className="magenta text-shadow-light">Number Guessing Game</h2>
+                    <Col lg={4} sm={6} className="workcard">
+                        <h2 className="magenta text-shadow-light down50">Number Guessing Game</h2>
                         <a className="thumnail" href="https://github.com/haichungcn/number-guessing-game" _target="blank">
                         <Figure.Image
                             className="mt-3 border-shadow"
@@ -164,7 +165,7 @@ export default function HomePage(props) {
                             src={require(`../static/game2.png`)}
                         /></a>
                     </Col>
-                    <Col lg={4} sm={6}>
+                    <Col lg={4} sm={6} className="workcard">
                         <a className="thumnail" href="https://romantic-hawking-b197a1.netlify.com/" _target="blank">
                         <Figure.Image
                             className="mt-3 border-shadow"
@@ -172,12 +173,12 @@ export default function HomePage(props) {
                             width={400}
                             src={require(`../static/game3.png`)}
                         /></a>
-                        <h2 className="magenta text-shadow-light">React Tic-Tac-Toe with Facebook login</h2>
+                        <h2 className="magenta text-shadow-light up50">React Tic-Tac-Toe with Facebook login</h2>
                     </Col>
                 </Row>
                 <Row className="w-100 mt-5">
-                    <Col lg={4} sm={6}>
-                        <h2 className="magenta text-shadow-light">Currency Converter using API</h2>
+                    <Col lg={4} sm={6} className="workcard">
+                        <h2 className="magenta text-shadow-light down50">Currency Converter using API</h2>
                         <a className="thumnail" href="https://github.com/haichungcn/currencyconverter" _target="blank">
                             <Figure.Image
                                 className="mt-3 border-shadow"
@@ -187,7 +188,7 @@ export default function HomePage(props) {
                             />
                         </a>
                     </Col>
-                    <Col lg={4} sm={6}>
+                    <Col lg={4} sm={6} className="workcard">
                         <a className="thumnail" href="https://r-weather.netlify.com/" _target="blank">
                         <Figure.Image
                             className="mt-3 border-shadow"
@@ -195,10 +196,10 @@ export default function HomePage(props) {
                             width={400}
                             src={require(`../static/app2.png`)}
                         /></a>
-                        <h2 className="magenta text-shadow-light">React Weather App with API</h2>
+                        <h2 className="magenta text-shadow-light up50">React Weather App with API</h2>
                     </Col>
-                    <Col lg={4} sm={6}>
-                        <h2 className="magenta text-shadow-light">React Movie Database App with API</h2>
+                    <Col lg={4} sm={6} className="workcard">
+                        <h2 className="magenta text-shadow-light down50">React Movie Database App with API</h2>
                         <a className="thumnail" href="https://clever-goldberg-9d03a2.netlify.com/" _target="blank">
                         <Figure.Image
                             className="mt-3 border-shadow"
@@ -209,7 +210,7 @@ export default function HomePage(props) {
                     </Col>
                 </Row>
                 <Row className="w-100 mt-5">
-                    <Col lg={4} sm={6}>
+                    <Col lg={4} sm={6} className="workcard">
                         <a className="thumnail" href="https://determined-turing-e577a7.netlify.com/" _target="blank">
                         <Figure.Image
                             className="mt-3 border-shadow"
@@ -217,9 +218,10 @@ export default function HomePage(props) {
                             width={400}
                             src={require(`../static/app4.png`)}
                         /></a>
-                        <h2 className="magenta text-shadow-light">Twitter</h2>
+                        <h2 className="magenta text-shadow-light up50">Twitter</h2>
                     </Col>
-                    <Col lg={4} sm={6}>
+                    <Col lg={4} sm={6} className="workcard">
+                        <h2 className="magenta text-shadow-light down50">To-do App</h2>
                         <a className="thumnail" href="https://app.netlify.com/sites/upbeat-meninsky-5ab86c/deploys" _target="blank">
                         <Figure.Image
                             className="mt-3 border-shadow"
@@ -227,9 +229,8 @@ export default function HomePage(props) {
                             width={400}
                             src={require(`../static/app5.png`)}
                         /></a>
-                        <h2 className="magenta text-shadow-light">To-do App</h2>
                     </Col>
-                    <Col lg={4} sm={6}>
+                    <Col lg={4} sm={6} className="workcard">
                         <a className="thumnail" href="https://github.com/chloe-shin/r-githubissue" _target="blank">
                         <Figure.Image
                             className="mt-3 border-shadow"
@@ -237,7 +238,7 @@ export default function HomePage(props) {
                             width={400}
                             src={require(`../static/app6.png`)}
                         /></a>
-                        <h2 className="magenta text-shadow-light">React-Github</h2>
+                        <h2 className="magenta text-shadow-light up50">React-Github</h2>
                     </Col>
                 </Row>                    
             </section>
