@@ -37,7 +37,7 @@ function App() {
   const onScroll= e => {
     console.log('position: ', e.target.scrollTop, ' screen: ', window.innerHeight)
     e.target.scrollTop > 9 ? setActiveClass('dark') : setActiveClass('');
-    if (e.target.scrollTop < 9) e.target.scrollTop = 0;
+    if (e.target.scrollTop < 9) e.target.scrollTop = 5;
     // if (e.target.scrollTop > 460 && e.target.scrollTop < 800); e.target.scrollTop = window.innerHeight;
     setPosition(e.target.scrollTop);
   }

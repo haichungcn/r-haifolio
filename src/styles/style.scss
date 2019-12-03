@@ -61,6 +61,12 @@ body {
             left: 130px;
             top: 2px;
             z-index: -1;
+            @media screen and (max-width: 800px){
+                left: 102px;
+            }
+        }
+        @media screen and (max-width: 800px){
+            font-size: 1.5rem;
         }
     }
 }
@@ -234,7 +240,7 @@ body {
 }
 
 .navigationSection {
-    position: fixed;
+    position: fixed;   
     top: 0;
     left: 0;
     width: 100vw;
@@ -242,6 +248,10 @@ body {
     padding: 30px 100px;
     box-sizing: border-box;
     transition: .5s;
+    @media screen and (max-width: 800px){
+        height: 80px;
+        padding: 5px 30px;
+    }
     ul {
         position: absolute;
         right: 0;
@@ -376,9 +386,20 @@ body {
     header {
         width: 100%;
         height: 100vh;
-        background-size: cover;
-        padding-top: 15rem;
+        // padding-top: 15rem;
         // padding-left: 10rem;
+        .headerTitle{
+            margin-top: 20vh;
+        }
+        @media screen and (max-width: 1000px){
+            height: 70vh;
+        }
+        @media screen and (max-width: 800px){
+            height: 60vh;
+            .headerTitle{
+                margin-top: 20vh;
+            }
+        }
     }
     .sec1 {
         margin-top: 10vh;
@@ -391,7 +412,10 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 1.7rem;
+        font-size: 1.7vw;
+        @media screen and (max-width: 800px){
+            font-size: 3vw;
+        }
         color: $primarytext-white;
         position: relative;
         z-index: 10;
@@ -418,13 +442,20 @@ body {
         z-index: 1;
         color: $primarytext-white;
         font-family: $monospace-font;
-        font-size: 3rem;
+        font-size: 3vw;
+        @media screen and (max-width: 1000px){
+            line-height: 7vh;
+        }
+        @media screen and (max-width: 800px){
+        font-size: 5vw;
+        line-height: 4vh;
+        }
         text-align: left;
-        margin: 0 auto;
+        margin: 0 10vw;
         padding: 10px;
         padding-left: 0;
         width: 65%;
-        line-height: 4.5rem;
+        line-height: 10vh;
         text-shadow: -1px -1px 1px rgba(45, 245, 249, 0.187), 1px 1px 1px rgba(63, 212, 232, 0.5), 5px 2px 4px rgba(171, 240, 247, 0.112);
         .startingSymbol {
             margin-right: 40px;
@@ -445,6 +476,9 @@ body {
                 top: 2px;
                 z-index: 0;
                 animation: blink 1s infinite;
+                @media screen and (max-width: 800px){
+                    left: 0px;
+                }
             }                    
         }
     }
@@ -457,10 +491,34 @@ body {
         background-image: url("../static/02s.jpg");
         background-size: 130%;
         background-position: center;
+        background-repeat: no-repeat;
         position: absolute;
         z-index: -1;
         transform:translateZ(-1px) scale(2);
+        @media screen and (max-width:3500px){
+            top: -250px;
+        }
+        @media screen and (max-width: 800px){
+            top: 0;
+            height: 50vh;
+            background-size: cover;
+        }
     }
+    &::after {
+        content:"";
+        position: fixed;
+        width: 100vw;
+        height: 140vh;
+        top: 0;
+        left:0;
+        background-image: url("../static/02s.jpg");
+        background-size: 130%;
+        background-position: center;
+        background-repeat: repeat;
+        z-index: -10;
+        transform:translateZ(-1px) scale(2);
+    }
+
 }   
 
 .sec2 {
@@ -477,13 +535,25 @@ body {
     transform-style: preserve-3d;
     &::before {
         height:250vh;
+    }
+    @media screen and (max-width: 800px){
+        h2{
+            font-size: 4vw;
+        }
     } 
+    .thumnail:hover > img {
+        box-shadow: 0 10px 15px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22)!important;
+        transform: translateY(-10px) scale(1.005)!important;
+        transition-duration: .4s;
+        transform: scale(3);
+    }
 }
 
-.thumbnail:hover {
+.box-shadow:hover > img{
     box-shadow: 0 10px 15px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22)!important;
     transform: translateY(-10px) scale(1.005)!important;
     transition-duration: .4s;
+    transform: scale(3);
 }
 
 .sec3 {
@@ -510,6 +580,12 @@ body {
         // width: 45vw;
         font-family: $sans-serif-font;
     }
+    @media screen and (max-width: 1000px) {
+        margin-top: 900px;
+    }
+    @media screen and (max-width: 800px) {
+        margin-top: 550px;
+    }
 }
 
 .typing-emoji {
@@ -527,7 +603,10 @@ body {
 
 .glitch {
     color: $primarytext-reverse;
-    font-size: 6rem;
+    font-size: 5.5vw;
+    @media screen and (max-width:800px){
+        font-size: 10vw;
+    }
     position: relative;
     width: auto;
     margin: 0 auto;
@@ -613,9 +692,10 @@ footer {
 
 .border-shadow {
     border: solid 3px rgb(192, 38, 206);
-    border-radius: 10%;
+    border-radius: 10px;
     box-shadow: 7px 10px 20px rgba(208, 249, 249,.4);
 }
+
 
 .formImage {
     width: 30rem;
@@ -626,7 +706,7 @@ footer {
 }
 
 footer {
-    position: relative;
+    margin-top: auto;
     z-index: 10;
     min-height: 29rem;
     font-family: $monospace-font;
@@ -636,7 +716,7 @@ footer {
     .Haifolio {
             font-family: $cursive-font;
             color: $primarytext-reverse;
-            font-size: 3rem;
+            font-size: 3vw;
             width: 200px;
             h2 {
             line-height: 80px;
@@ -649,6 +729,9 @@ footer {
                 left: 130px;
                 top: 2px;
                 z-index: 0;
+            }
+            @media screen and (max-width: 800px){
+                
             }
         }
     }
